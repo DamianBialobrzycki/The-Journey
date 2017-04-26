@@ -350,7 +350,7 @@
         cpEXeCYvb7iQWSvVGI972Qir4I1Ode92IDqEVkhV2I1Qhd2H9co/Yody/3BdU9sAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="inventorySword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAANBSURBVGhD3Zk/axRBGIdPjf8uMVoEtNBDxEpQEisl
@@ -370,7 +370,7 @@
         llokeMNXJglINMrW+RAZlhEZlo+lyl/LLcOoNlQ7ZAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pictureBox11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="inventoryBluePotion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAaTSURBVGhD7ZptTJVlGMf5YEylUtN8i+ELCcrLOXAO
@@ -404,7 +404,7 @@
         tIeTCYUoWgWjqv+HGhjE5AVKG65/rBHFBxFRfPA4HfE/nbvlHSQUp+4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox12.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="inventoryMace.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAARBSURBVGhD3ZjLahRBFIYHFDGRGMUhQYkTiJDEW0KC
@@ -428,7 +428,7 @@
         cpEXeCYvb7iQWSvVGI972Qir4I1Ode92IDqEVkhV2I1Qhd2H9co/Yody/3BdU9sAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="inventoryRedPotion.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAaISURBVGhD7Zp7TJV1GMdZLqZo3i1QUiRFMRHjIqCo
@@ -462,7 +462,7 @@
         Zgpwre1o46v/QdGIxrsR0Xj3cdrvb2bja3DFIVQVAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="pictureBox14.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="inventoryBow.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAANbY1E9YMgAAABl0RVh0U29m
         dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAN/SURBVGhD3ZlLa1NBGIYDXoO09QIpamylSqTWVihS

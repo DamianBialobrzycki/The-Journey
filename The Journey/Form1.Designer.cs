@@ -39,11 +39,11 @@
             this.sword = new System.Windows.Forms.PictureBox();
             this.bow = new System.Windows.Forms.PictureBox();
             this.mace = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.inventorySword = new System.Windows.Forms.PictureBox();
+            this.inventoryBluePotion = new System.Windows.Forms.PictureBox();
+            this.inventoryMace = new System.Windows.Forms.PictureBox();
+            this.inventoryRedPotion = new System.Windows.Forms.PictureBox();
+            this.inventoryBow = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -74,11 +74,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.sword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bow)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mace)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventorySword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBluePotion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryMace)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryRedPotion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBow)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -215,60 +215,60 @@
             this.mace.TabStop = false;
             this.mace.Visible = false;
             // 
-            // pictureBox10
+            // inventorySword
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(90, 372);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox10.TabIndex = 10;
-            this.pictureBox10.TabStop = false;
+            this.inventorySword.BackColor = System.Drawing.Color.Transparent;
+            this.inventorySword.Image = ((System.Drawing.Image)(resources.GetObject("inventorySword.Image")));
+            this.inventorySword.Location = new System.Drawing.Point(90, 372);
+            this.inventorySword.Name = "inventorySword";
+            this.inventorySword.Size = new System.Drawing.Size(50, 50);
+            this.inventorySword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inventorySword.TabIndex = 10;
+            this.inventorySword.TabStop = false;
             // 
-            // pictureBox11
+            // inventoryBluePotion
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(148, 372);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox11.TabIndex = 11;
-            this.pictureBox11.TabStop = false;
+            this.inventoryBluePotion.BackColor = System.Drawing.Color.Transparent;
+            this.inventoryBluePotion.Image = ((System.Drawing.Image)(resources.GetObject("inventoryBluePotion.Image")));
+            this.inventoryBluePotion.Location = new System.Drawing.Point(148, 372);
+            this.inventoryBluePotion.Name = "inventoryBluePotion";
+            this.inventoryBluePotion.Size = new System.Drawing.Size(50, 50);
+            this.inventoryBluePotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inventoryBluePotion.TabIndex = 11;
+            this.inventoryBluePotion.TabStop = false;
             // 
-            // pictureBox12
+            // inventoryMace
             // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(204, 372);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox12.TabIndex = 12;
-            this.pictureBox12.TabStop = false;
+            this.inventoryMace.BackColor = System.Drawing.Color.Transparent;
+            this.inventoryMace.Image = ((System.Drawing.Image)(resources.GetObject("inventoryMace.Image")));
+            this.inventoryMace.Location = new System.Drawing.Point(204, 372);
+            this.inventoryMace.Name = "inventoryMace";
+            this.inventoryMace.Size = new System.Drawing.Size(50, 50);
+            this.inventoryMace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inventoryMace.TabIndex = 12;
+            this.inventoryMace.TabStop = false;
             // 
-            // pictureBox13
+            // inventoryRedPotion
             // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(260, 372);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox13.TabIndex = 13;
-            this.pictureBox13.TabStop = false;
+            this.inventoryRedPotion.BackColor = System.Drawing.Color.Transparent;
+            this.inventoryRedPotion.Image = ((System.Drawing.Image)(resources.GetObject("inventoryRedPotion.Image")));
+            this.inventoryRedPotion.Location = new System.Drawing.Point(260, 372);
+            this.inventoryRedPotion.Name = "inventoryRedPotion";
+            this.inventoryRedPotion.Size = new System.Drawing.Size(50, 50);
+            this.inventoryRedPotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inventoryRedPotion.TabIndex = 13;
+            this.inventoryRedPotion.TabStop = false;
             // 
-            // pictureBox14
+            // inventoryBow
             // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(316, 372);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox14.TabIndex = 14;
-            this.pictureBox14.TabStop = false;
+            this.inventoryBow.BackColor = System.Drawing.Color.Transparent;
+            this.inventoryBow.Image = ((System.Drawing.Image)(resources.GetObject("inventoryBow.Image")));
+            this.inventoryBow.Location = new System.Drawing.Point(316, 372);
+            this.inventoryBow.Name = "inventoryBow";
+            this.inventoryBow.Size = new System.Drawing.Size(50, 50);
+            this.inventoryBow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.inventoryBow.TabIndex = 14;
+            this.inventoryBow.TabStop = false;
             // 
             // label1
             // 
@@ -496,11 +496,11 @@
             this.ClientSize = new System.Drawing.Size(726, 466);
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox10);
+            this.Controls.Add(this.inventoryBow);
+            this.Controls.Add(this.inventoryRedPotion);
+            this.Controls.Add(this.inventoryMace);
+            this.Controls.Add(this.inventoryBluePotion);
+            this.Controls.Add(this.inventorySword);
             this.Controls.Add(this.player);
             this.Controls.Add(this.redPotion);
             this.Controls.Add(this.bluePotion);
@@ -527,11 +527,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.sword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bow)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mace)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventorySword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBluePotion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryMace)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryRedPotion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.inventoryBow)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -560,11 +560,11 @@
         private System.Windows.Forms.PictureBox sword;
         private System.Windows.Forms.PictureBox bow;
         private System.Windows.Forms.PictureBox mace;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox inventorySword;
+        private System.Windows.Forms.PictureBox inventoryBluePotion;
+        private System.Windows.Forms.PictureBox inventoryMace;
+        private System.Windows.Forms.PictureBox inventoryRedPotion;
+        private System.Windows.Forms.PictureBox inventoryBow;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button upMoveButton;
