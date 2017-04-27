@@ -30,6 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.playerHitPoints = new System.Windows.Forms.Label();
+            this.batHitPoints = new System.Windows.Forms.Label();
+            this.ghostHitPoints = new System.Windows.Forms.Label();
+            this.ghoulHitPoints = new System.Windows.Forms.Label();
             this.player = new System.Windows.Forms.PictureBox();
             this.bat = new System.Windows.Forms.PictureBox();
             this.ghost = new System.Windows.Forms.PictureBox();
@@ -44,14 +52,6 @@
             this.inventoryMace = new System.Windows.Forms.PictureBox();
             this.inventoryRedPotion = new System.Windows.Forms.PictureBox();
             this.inventoryBow = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.playerHitPoints = new System.Windows.Forms.Label();
-            this.batHitPoints = new System.Windows.Forms.Label();
-            this.ghostHitPoints = new System.Windows.Forms.Label();
-            this.ghoultHitPoints = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.upMoveButton = new System.Windows.Forms.Button();
@@ -96,7 +96,7 @@
             this.tableLayoutPanel1.Controls.Add(this.playerHitPoints, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.batHitPoints, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.ghostHitPoints, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.ghoultHitPoints, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.ghoulHitPoints, 1, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(480, 287);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -106,6 +106,79 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(181, 61);
             this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Gracz";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Nietoperz";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(3, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Duch";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 45);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Upiór";
+            // 
+            // playerHitPoints
+            // 
+            this.playerHitPoints.AutoSize = true;
+            this.playerHitPoints.Location = new System.Drawing.Point(70, 0);
+            this.playerHitPoints.Name = "playerHitPoints";
+            this.playerHitPoints.Size = new System.Drawing.Size(77, 13);
+            this.playerHitPoints.TabIndex = 4;
+            this.playerHitPoints.Text = "playerHitPoints";
+            // 
+            // batHitPoints
+            // 
+            this.batHitPoints.AutoSize = true;
+            this.batHitPoints.Location = new System.Drawing.Point(70, 15);
+            this.batHitPoints.Name = "batHitPoints";
+            this.batHitPoints.Size = new System.Drawing.Size(64, 13);
+            this.batHitPoints.TabIndex = 5;
+            this.batHitPoints.Text = "batHitPoints";
+            // 
+            // ghostHitPoints
+            // 
+            this.ghostHitPoints.AutoSize = true;
+            this.ghostHitPoints.Location = new System.Drawing.Point(70, 30);
+            this.ghostHitPoints.Name = "ghostHitPoints";
+            this.ghostHitPoints.Size = new System.Drawing.Size(75, 13);
+            this.ghostHitPoints.TabIndex = 6;
+            this.ghostHitPoints.Text = "ghostHitPoints";
+            // 
+            // ghoulHitPoints
+            // 
+            this.ghoulHitPoints.AutoSize = true;
+            this.ghoulHitPoints.Location = new System.Drawing.Point(70, 45);
+            this.ghoulHitPoints.Name = "ghoulHitPoints";
+            this.ghoulHitPoints.Size = new System.Drawing.Size(75, 13);
+            this.ghoulHitPoints.TabIndex = 7;
+            this.ghoulHitPoints.Text = "ghoulHitPoints";
             // 
             // player
             // 
@@ -225,6 +298,7 @@
             this.inventorySword.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.inventorySword.TabIndex = 10;
             this.inventorySword.TabStop = false;
+            this.inventorySword.Click += new System.EventHandler(this.inventorySword_Click);
             // 
             // inventoryBluePotion
             // 
@@ -236,6 +310,7 @@
             this.inventoryBluePotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.inventoryBluePotion.TabIndex = 11;
             this.inventoryBluePotion.TabStop = false;
+            this.inventoryBluePotion.Click += new System.EventHandler(this.inventoryBluePotion_Click);
             // 
             // inventoryMace
             // 
@@ -247,6 +322,7 @@
             this.inventoryMace.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.inventoryMace.TabIndex = 12;
             this.inventoryMace.TabStop = false;
+            this.inventoryMace.Click += new System.EventHandler(this.inventoryMace_Click);
             // 
             // inventoryRedPotion
             // 
@@ -258,6 +334,7 @@
             this.inventoryRedPotion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.inventoryRedPotion.TabIndex = 13;
             this.inventoryRedPotion.TabStop = false;
+            this.inventoryRedPotion.Click += new System.EventHandler(this.inventoryRedPotion_Click);
             // 
             // inventoryBow
             // 
@@ -269,79 +346,7 @@
             this.inventoryBow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.inventoryBow.TabIndex = 14;
             this.inventoryBow.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(3, 0, 0, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Gracz";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Nietoperz";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Duch";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 45);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Upiór";
-            // 
-            // playerHitPoints
-            // 
-            this.playerHitPoints.AutoSize = true;
-            this.playerHitPoints.Location = new System.Drawing.Point(70, 0);
-            this.playerHitPoints.Name = "playerHitPoints";
-            this.playerHitPoints.Size = new System.Drawing.Size(77, 13);
-            this.playerHitPoints.TabIndex = 4;
-            this.playerHitPoints.Text = "playerHitPoints";
-            // 
-            // batHitPoints
-            // 
-            this.batHitPoints.AutoSize = true;
-            this.batHitPoints.Location = new System.Drawing.Point(70, 15);
-            this.batHitPoints.Name = "batHitPoints";
-            this.batHitPoints.Size = new System.Drawing.Size(64, 13);
-            this.batHitPoints.TabIndex = 5;
-            this.batHitPoints.Text = "batHitPoints";
-            // 
-            // ghostHitPoints
-            // 
-            this.ghostHitPoints.AutoSize = true;
-            this.ghostHitPoints.Location = new System.Drawing.Point(70, 30);
-            this.ghostHitPoints.Name = "ghostHitPoints";
-            this.ghostHitPoints.Size = new System.Drawing.Size(75, 13);
-            this.ghostHitPoints.TabIndex = 6;
-            this.ghostHitPoints.Text = "ghostHitPoints";
-            // 
-            // ghoultHitPoints
-            // 
-            this.ghoultHitPoints.AutoSize = true;
-            this.ghoultHitPoints.Location = new System.Drawing.Point(70, 45);
-            this.ghoultHitPoints.Name = "ghoultHitPoints";
-            this.ghoultHitPoints.Size = new System.Drawing.Size(75, 13);
-            this.ghoultHitPoints.TabIndex = 7;
-            this.ghoultHitPoints.Text = "ghoulHitPoints";
+            this.inventoryBow.Click += new System.EventHandler(this.inventoryBow_Click);
             // 
             // tableLayoutPanel2
             // 
@@ -384,6 +389,7 @@
             this.upMoveButton.TabIndex = 1;
             this.upMoveButton.Text = "↑";
             this.upMoveButton.UseVisualStyleBackColor = true;
+            this.upMoveButton.Click += new System.EventHandler(this.upMoveButton_Click);
             // 
             // leftMoveButton
             // 
@@ -394,6 +400,7 @@
             this.leftMoveButton.TabIndex = 2;
             this.leftMoveButton.Text = "←";
             this.leftMoveButton.UseVisualStyleBackColor = true;
+            this.leftMoveButton.Click += new System.EventHandler(this.leftMoveButton_Click);
             // 
             // downMoveButton
             // 
@@ -404,6 +411,7 @@
             this.downMoveButton.TabIndex = 3;
             this.downMoveButton.Text = "↓";
             this.downMoveButton.UseVisualStyleBackColor = true;
+            this.downMoveButton.Click += new System.EventHandler(this.downMoveButton_Click);
             // 
             // rightMoveButton
             // 
@@ -414,6 +422,7 @@
             this.rightMoveButton.TabIndex = 4;
             this.rightMoveButton.Text = "→";
             this.rightMoveButton.UseVisualStyleBackColor = true;
+            this.rightMoveButton.Click += new System.EventHandler(this.rightMoveButton_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -456,6 +465,7 @@
             this.upAttackButton.TabIndex = 1;
             this.upAttackButton.Text = "↑";
             this.upAttackButton.UseVisualStyleBackColor = true;
+            this.upAttackButton.Click += new System.EventHandler(this.upAttackButton_Click);
             // 
             // leftAttackButton
             // 
@@ -466,6 +476,7 @@
             this.leftAttackButton.TabIndex = 2;
             this.leftAttackButton.Text = "←";
             this.leftAttackButton.UseVisualStyleBackColor = true;
+            this.leftAttackButton.Click += new System.EventHandler(this.leftAttackButton_Click);
             // 
             // downAttackButton
             // 
@@ -476,6 +487,7 @@
             this.downAttackButton.TabIndex = 3;
             this.downAttackButton.Text = "↓";
             this.downAttackButton.UseVisualStyleBackColor = true;
+            this.downAttackButton.Click += new System.EventHandler(this.downAttackButton_Click);
             // 
             // rightAttackButton
             // 
@@ -486,6 +498,7 @@
             this.rightAttackButton.TabIndex = 4;
             this.rightAttackButton.Text = "→";
             this.rightAttackButton.UseVisualStyleBackColor = true;
+            this.rightAttackButton.Click += new System.EventHandler(this.rightAttackButton_Click);
             // 
             // Form1
             // 
@@ -516,6 +529,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "Wyprawa";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.player)).EndInit();
@@ -550,7 +564,7 @@
         private System.Windows.Forms.Label playerHitPoints;
         private System.Windows.Forms.Label batHitPoints;
         private System.Windows.Forms.Label ghostHitPoints;
-        private System.Windows.Forms.Label ghoultHitPoints;
+        private System.Windows.Forms.Label ghoulHitPoints;
         private System.Windows.Forms.PictureBox player;
         private System.Windows.Forms.PictureBox bat;
         private System.Windows.Forms.PictureBox ghost;
