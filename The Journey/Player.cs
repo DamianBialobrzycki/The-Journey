@@ -57,22 +57,24 @@ namespace The_Journey
 
             if(!game.WeaponInRoom.PickedUp)
             {
-                // do uzupelnienia str 507
+                // See if the weapon is nearby, and possibly pick it up
+                if (game.WeaponInRoom.Nearby(location, 15))
+                {
+                    inventory.Add(game.WeaponInRoom);
+                    game.WeaponInRoom.PickedUpWeapon();
+                }
             }
         }
 
         public void Attack(Direction direction, Random random)
         {
-            // do uzupelnienia str 507
-            if(equippedWeapon)
+            if (equippedWeapon != null)
             {
-                if(equippedWeapon is IPotion)
+                equippedWeapon.Attack(direction, random);
+                if (equippedWeapon is IPotion)
                 {
-                    // do uzupelnienia str 507
-                }
-                else
-                {
-                    equippedWeapon.Attack();
+                    inventory.Remove(equippedWeapon);
+                    equippedWeapon = null;
                 }
             }
         }

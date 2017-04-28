@@ -38,22 +38,21 @@ namespace The_Journey
 
             int enemiesShown = 0;
 
-            foreach(Enemy enemy in game.Enemies)
+            player.Visible = true;
+
+            foreach (Enemy enemy in game.Enemies)
             {
-                if(enemy is Bat)
+                if (enemy is Bat)
                 {
                     bat.Location = enemy.Location;
                     batHitPoints.Text = enemy.HitPoints.ToString();
-                    if(enemy.HitPoints > 0)
+                    if (enemy.HitPoints > 0)
                     {
                         showBat = true;
                         enemiesShown++;
                     }
                 }
-            }
 
-            foreach (Enemy enemy in game.Enemies)
-            {
                 if (enemy is Ghost)
                 {
                     ghost.Location = enemy.Location;
@@ -64,10 +63,7 @@ namespace The_Journey
                         enemiesShown++;
                     }
                 }
-            }
 
-            foreach (Enemy enemy in game.Enemies)
-            {
                 if (enemy is Ghoul)
                 {
                     ghoul.Location = enemy.Location;
@@ -80,23 +76,32 @@ namespace The_Journey
                 }
             }
 
-            if(showBat == false)
+            if (!showBat)
             {
                 bat.Visible = false;
                 batHitPoints.Text = "";
             }
+            else bat.Visible = true;
 
-            if(showGhost == false)
+            if (!showGhost)
             {
                 ghost.Visible = false;
                 ghostHitPoints.Text = "";
             }
+            else ghost.Visible = true;
 
-            if(showGhoul == false)
-            {
+           if (!showGhoul)
+           {
                 ghoul.Visible = false;
                 ghoulHitPoints.Text = "";
-            }
+           }
+           else ghoul.Visible = true;
+
+            inventorySword.Visible = false;
+            inventoryBow.Visible = false;
+            inventoryRedPotion.Visible = false;
+            inventoryBluePotion.Visible = false;
+            inventoryMace.Visible = false;
 
             sword.Visible = false;
             bow.Visible = false;
@@ -106,7 +111,7 @@ namespace The_Journey
 
             Control weaponControl = null;
 
-            switch(game.WeaponInRoom.Name)
+            switch (game.WeaponInRoom.Name)
             {
                 case "Miecz":
                     weaponControl = sword;
@@ -121,33 +126,17 @@ namespace The_Journey
                     weaponControl = bluePotion;
                     break;
                 case "Czerwona mikstura":
-                    weaponControl = redPotion;
+                    weaponControl = bluePotion;
                     break;
             }
 
             weaponControl.Visible = true;
 
-            foreach(string playerWeapon in game.PlayerWeapons)
-            {
-                switch(playerWeapon)
-                {
-                    case "Miecz":
-                        inventorySword.Visible = true;
-                        break;
-                    case "Łuk":
-                        inventoryBow.Visible = true;
-                        break;
-                    case "Buława":
-                        inventoryMace.Visible = true;
-                        break;
-                    case "Niebieska mikstura":
-                        inventoryBluePotion.Visible = true;
-                        break;
-                    case "Czerwona mikstura":
-                        inventoryRedPotion.Visible = true;
-                        break;
-                }
-            }
+            if (game.CheckPlayerInventory("Miecz")) inventorySword.Visible = true;
+            if (game.CheckPlayerInventory("Łuk")) inventoryBow.Visible = true;
+            if (game.CheckPlayerInventory("Buława")) inventoryMace.Visible = true;
+            if (game.CheckPlayerInventory("Niebieska mikstura")) inventoryBluePotion.Visible = true;
+            if (game.CheckPlayerInventory("Czerwona mikstura")) inventoryRedPotion.Visible = true;
 
             weaponControl.Location = game.WeaponInRoom.Location;
             if (game.WeaponInRoom.PickedUp)
@@ -155,104 +144,22 @@ namespace The_Journey
             else
                 weaponControl.Visible = true;
 
-            if(game.PlayerHitPoints <= 0)
+            if (game.PlayerHitPoints <= 0)
             {
-                MessageBox.Show("Zostałeś zabity!");
+                MessageBox.Show("Zostałeś zabity");
                 Application.Exit();
             }
-
-            if(enemiesShown < 1)
+            if (enemiesShown < 1)
             {
                 MessageBox.Show("Pokonałeś przeciwników na tym poziomie");
                 game.NewLevel(random);
                 UpdateCharacters();
             }
         }
+        
 
-        private void inventorySword_Click(object sender, EventArgs e)
-        {
-            if (game.CheckPlayerInventory(sword.Name))
-            {
-                game.Equip(sword.Name);
 
-                inventoryBow.BorderStyle = BorderStyle.None;
-                inventorySword.BorderStyle = BorderStyle.FixedSingle;
-                inventoryMace.BorderStyle = BorderStyle.None;
-                inventoryRedPotion.BorderStyle = BorderStyle.None;
-                inventoryBluePotion.BorderStyle = BorderStyle.None;
 
-                CheckPotion(false);
-                UpdateCharacters();
-            }   
-        }
-
-        private void inventoryBluePotion_Click(object sender, EventArgs e)
-        {
-            if (game.CheckPlayerInventory(bluePotion.Name))
-            {
-                game.Equip(bluePotion.Name);
-
-                inventoryBow.BorderStyle = BorderStyle.None;
-                inventorySword.BorderStyle = BorderStyle.None;
-                inventoryMace.BorderStyle = BorderStyle.None;
-                inventoryRedPotion.BorderStyle = BorderStyle.None;
-                inventoryBluePotion.BorderStyle = BorderStyle.FixedSingle;
-
-                CheckPotion(true);
-                UpdateCharacters();
-            }
-        }
-
-        private void inventoryMace_Click(object sender, EventArgs e)
-        {
-            if (game.CheckPlayerInventory(mace.Name))
-            {
-                game.Equip(mace.Name);
-
-                inventoryBow.BorderStyle = BorderStyle.None;
-                inventorySword.BorderStyle = BorderStyle.None;
-                inventoryMace.BorderStyle = BorderStyle.FixedSingle;
-                inventoryRedPotion.BorderStyle = BorderStyle.None;
-                inventoryBluePotion.BorderStyle = BorderStyle.None;
-
-                CheckPotion(false);
-                UpdateCharacters();
-            }
-        }
-
-        private void inventoryRedPotion_Click(object sender, EventArgs e)
-        {
-            if (game.CheckPlayerInventory(redPotion.Name))
-            {
-                game.Equip(redPotion.Name);
-
-                inventoryBow.BorderStyle = BorderStyle.None;
-                inventorySword.BorderStyle = BorderStyle.None;
-                inventoryMace.BorderStyle = BorderStyle.None;
-                inventoryRedPotion.BorderStyle = BorderStyle.FixedSingle;
-                inventoryBluePotion.BorderStyle = BorderStyle.None;
-
-                CheckPotion(true);
-                UpdateCharacters();
-            }
-        }
-
-        private void inventoryBow_Click(object sender, EventArgs e)
-        {
-            if(game.CheckPlayerInventory(bow.Name))
-            {
-                game.Equip(bow.Name);
-                
-                inventoryBow.BorderStyle = BorderStyle.FixedSingle;
-                inventorySword.BorderStyle = BorderStyle.None;
-                inventoryMace.BorderStyle = BorderStyle.None;
-                inventoryRedPotion.BorderStyle = BorderStyle.None;
-                inventoryBluePotion.BorderStyle = BorderStyle.None;
-
-                CheckPotion(false);
-                UpdateCharacters();
-            }
-        }
 
         private void upMoveButton_Click(object sender, EventArgs e)
         {
@@ -260,15 +167,15 @@ namespace The_Journey
             UpdateCharacters();
         }
 
-        private void leftMoveButton_Click(object sender, EventArgs e)
-        {
-            game.Move(Direction.Left, random);
-            UpdateCharacters();
-        }
-
         private void downMoveButton_Click(object sender, EventArgs e)
         {
             game.Move(Direction.Down, random);
+            UpdateCharacters();
+        }
+
+        private void leftMoveButton_Click(object sender, EventArgs e)
+        {
+            game.Move(Direction.Left, random);
             UpdateCharacters();
         }
 
@@ -281,34 +188,104 @@ namespace The_Journey
         private void upAttackButton_Click(object sender, EventArgs e)
         {
             game.Attack(Direction.Up, random);
-            
-            UpdateCharacters();
-        }
-
-        private void leftAttackButton_Click(object sender, EventArgs e)
-        {
-            game.Attack(Direction.Left, random);
-
             UpdateCharacters();
         }
 
         private void downAttackButton_Click(object sender, EventArgs e)
         {
             game.Attack(Direction.Down, random);
+            UpdateCharacters();
+        }
 
+        private void leftAttackButton_Click(object sender, EventArgs e)
+        {
+            game.Attack(Direction.Left, random);
             UpdateCharacters();
         }
 
         private void rightAttackButton_Click(object sender, EventArgs e)
         {
             game.Attack(Direction.Right, random);
-
             UpdateCharacters();
+        }
+
+        private void inventorySword_Click(object sender, EventArgs e)
+        {
+            if (game.CheckPlayerInventory("Miecz"))
+            {
+                game.Equip("Miecz");
+                ClearEquiped();
+                inventorySword.BorderStyle = BorderStyle.FixedSingle;
+
+                CheckPotion(false);
+                UpdateCharacters();
+            }
+        }
+
+        private void inventoryBow_Click(object sender, EventArgs e)
+        {
+            if (game.CheckPlayerInventory("Łuk"))
+            {
+                game.Equip("Łuk");
+                ClearEquiped();
+                inventoryBow.BorderStyle = BorderStyle.FixedSingle;
+
+                CheckPotion(false);
+                UpdateCharacters();
+            }
+        }
+
+        private void inventoryBluePotion_Click(object sender, EventArgs e)
+        {
+            if (game.CheckPlayerInventory("Niebieska mikstura"))
+            {
+                game.Equip("Niebieska mikstura");
+                ClearEquiped();
+                inventoryBluePotion.BorderStyle = BorderStyle.FixedSingle;
+
+                CheckPotion(true);
+                UpdateCharacters();
+            }
+        }
+
+        private void inventoryRedPotion_Click(object sender, EventArgs e)
+        {
+            if (game.CheckPlayerInventory("Czerwona mikstura"))
+            {
+                game.Equip("Czerwona mikstura");
+                ClearEquiped();
+                inventoryRedPotion.BorderStyle = BorderStyle.FixedSingle;
+
+                CheckPotion(true);
+                UpdateCharacters();
+            }
+        }
+
+        private void inventoryMace_Click(object sender, EventArgs e)
+        {
+            if (game.CheckPlayerInventory("Buława"))
+            {
+                game.Equip("Buława");
+                ClearEquiped();
+                inventoryMace.BorderStyle = BorderStyle.FixedSingle;
+
+                CheckPotion(false);
+                UpdateCharacters();
+            }
+        }
+
+        private void ClearEquiped()
+        {
+            inventorySword.BorderStyle = BorderStyle.None;
+            inventoryBow.BorderStyle = BorderStyle.None;
+            inventoryRedPotion.BorderStyle = BorderStyle.None;
+            inventoryBluePotion.BorderStyle = BorderStyle.None;
+            inventoryMace.BorderStyle = BorderStyle.None;
         }
 
         private void CheckPotion(bool isCheck)
         {
-            if(isCheck)
+            if (isCheck)
             {
                 upAttackButton.Text = "♥";
                 leftAttackButton.Visible = false;

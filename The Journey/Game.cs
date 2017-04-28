@@ -75,49 +75,46 @@ namespace The_Journey
         {
             level++;
 
-            switch(level)
+            switch (level)
             {
                 case 1:
-                    Enemies = new List<Enemy>();
-                    Enemies.Add(new Bat(this, GetRandomLocation(random));
+                    //Enemies = new List<Enemy>();
+                    Enemies = new List<Enemy>() { new Bat(this, GetRandomLocation(random)), };
                     WeaponInRoom = new Sword(this, GetRandomLocation(random));
                     break;
                 case 2:
-                    Enemies = new List<Enemy>();
-                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
+                    Enemies = new List<Enemy> { new Ghost(this, GetRandomLocation(random)) };
                     WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                     break;
                 case 3:
-                    Enemies = new List<Enemy>();
-                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies = new List<Enemy> { new Ghoul(this, GetRandomLocation(random)) };
                     WeaponInRoom = new Bow(this, GetRandomLocation(random));
                     break;
                 case 4:
-                    Enemies = new List<Enemy>();
-                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                    // tu powstawiac warunki strona 503
-                    WeaponInRoom = new (this, GetRandomLocation(random));
+                    Enemies = new List<Enemy>() { new Bat(this, GetRandomLocation(random)), new Ghost(this, GetRandomLocation(random)) };
+                    if (!this.CheckPlayerInventory("Łuk"))
+                        WeaponInRoom = new Bow(this, GetRandomLocation(random));
+                    else if (!this.CheckPlayerInventory("Niebieska mikstura"))
+                        WeaponInRoom = new BluePotion(this, GetRandomLocation(random));
                     break;
                 case 5:
-                    Enemies = new List<Enemy>();
-                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies = new List<Enemy>() { new Bat(this, GetRandomLocation(random)), new Ghoul(this, GetRandomLocation(random)) };
                     WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
                     break;
                 case 6:
-                    Enemies = new List<Enemy>();
-                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
+                    Enemies = new List<Enemy>() { new Ghost(this, GetRandomLocation(random)), new Ghoul(this, GetRandomLocation(random)) };
                     WeaponInRoom = new Mace(this, GetRandomLocation(random));
                     break;
                 case 7:
-                    Enemies = new List<Enemy>();
-                    Enemies.Add(new Bat(this, GetRandomLocation(random)));
-                    Enemies.Add(new Ghost(this, GetRandomLocation(random)));
-                    Enemies.Add(new Ghoul(this, GetRandomLocation(random)));
-                    // tu powstawiac warunki strona 503
-                    WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                    Enemies = new List<Enemy>() {
+                        new Bat(this, GetRandomLocation(random)),
+                        new Ghost(this, GetRandomLocation(random)),
+                        new Ghoul(this, GetRandomLocation(random))
+                    };
+                    if (!this.CheckPlayerInventory("Buława"))
+                        WeaponInRoom = new Mace(this, GetRandomLocation(random));
+                    else if (!this.CheckPlayerInventory("Czerwona mikstura"))
+                        WeaponInRoom = new RedPotion(this, GetRandomLocation(random));
                     break;
                 case 8:
                     Application.Exit();

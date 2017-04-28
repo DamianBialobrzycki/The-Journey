@@ -33,7 +33,7 @@ namespace The_Journey
             {
                 foreach(Enemy enemy in game.Enemies)
                 {
-                    if(Nearby(enemy.Location, target, distance))
+                    if(Nearby(enemy.Location, target, radius))
                     {
                         enemy.Hit(damage, random);
                         return true;
@@ -44,6 +44,27 @@ namespace The_Journey
             }
 
             return false;
+        }
+
+        private Point Move(Direction direction, Point target, Rectangle rectangle)
+        {
+            location = target;
+            return base.Move(direction, rectangle);
+        }
+
+        private bool Nearby(Point point, Point target, int distance)
+        {
+            //location = target;
+            //return base.Nearby(point, distance);
+
+            if (Math.Abs(point.X - target.X) <= distance && (Math.Abs(point.Y - target.Y) <= distance))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

@@ -24,6 +24,7 @@ namespace The_Journey
         public override void Attack(Direction direction, Random random)
         {
             // do uzupelnienia str 511
+            DamageEnemy(direction, 30, 1, random);
         }
     }
 }

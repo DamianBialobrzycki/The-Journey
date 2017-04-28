@@ -25,6 +25,13 @@ namespace The_Journey
         {
             // do uzupelnienia str 511
 
+            int directionToAttack = (int)direction;
+
+            for(int i = 0; i < 4; i++)
+            {
+                DamageEnemy((Direction)directionToAttack, 20, 6, random);
+                directionToAttack++;
+            }
         }
     }
 }

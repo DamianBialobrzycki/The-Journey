@@ -11,24 +11,18 @@ namespace The_Journey
     {
         private const int NearPlayerDistance = 25;
 
-        private int hitPoints;
         public int HitPoints { get; private set; }
-
         public bool Dead
         {
             get
             {
-                if (hitPoints <= 0)
-                    return true;
-                else
-                    return false;
+                if (HitPoints <= 0) return true;
+                else return false;
             }
         }
 
-        public Enemy(Game game, Point location, int hitPoints) : base(game, location)
-        {
-            this.hitPoints = hitPoints;
-        }
+        public Enemy(Game game, Point location, int hitPoints)
+            : base(game, location) { HitPoints = hitPoints; }
 
         public abstract void Move(Random random);
 
@@ -45,7 +39,6 @@ namespace The_Journey
         protected Direction FindPlayerDirection(Point playerLocation)
         {
             Direction directionToMove;
-
             if (playerLocation.X > location.X + 10)
                 directionToMove = Direction.Right;
             else if (playerLocation.X < location.X - 10)
@@ -54,7 +47,6 @@ namespace The_Journey
                 directionToMove = Direction.Up;
             else
                 directionToMove = Direction.Down;
-
             return directionToMove;
         }
     }

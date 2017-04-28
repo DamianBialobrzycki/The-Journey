@@ -9,8 +9,8 @@ namespace The_Journey
     enum Direction
     {
         Up,
+        Right,
         Down,
-        Left,
-        Right
+        Left
     }
 }

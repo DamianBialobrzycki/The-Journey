@@ -29,11 +29,6 @@ namespace The_Journey
 
         }
 
-        public bool Nearby(Point locationToCheck, Point target, int distance)
-        {
-            // do uzupelnienia str 510
-        }
-
         public Point Move(Direction direction, Rectangle boundaries)
         {
             Point newLocation = location;
@@ -61,11 +56,6 @@ namespace The_Journey
             }
 
             return newLocation;
-        }
-
-        public Point Move(Direction direction, Point target, Rectangle boundaries)
-        {
-            // do uzupelnienia str 510
         }
     }
 }
